@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #FBEAEB;
+}
+
+nav {
+    background-color: #2F3C7E;
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 0 0 3px rgb(163, 157, 157);
+}
+
+nav h1 {
+    color: #FBEAEB; 
+    padding: 50px 40px;
+    font-size: xx-large;
+    font-family: Lexend Giga;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 80px 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+    color: #FBEAEB;
+}
+
+.quants {
+    width: 100%;
+    height: auto;
+    background-color: #2F3C7E;
+    text-align: center;
+    padding: 130px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: Sriracha;
+    font-size: xx-large;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+}
+
+.quants {
+    width: 100%;
+    height: auto;
+    background-color: #2F3C7E;
+    text-align: center;
+    padding: 130px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: Sriracha;
+    font-size: xx-large;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    
+    transition: transform 0.8s ease-in-out, 
+                box-shadow 0.8s ease-in-out, 
+                color 0.8s ease-in-out; 
+}
+
+.quants::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("images/calculator.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    transform: scale(1.1);
+    
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    z-index: -1;
+}
+
+.quants:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #2F3C7E;
+}
+
+.quants:hover::before {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+
+body {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@media (max-width:768px) {
+    .container {
+        display: block;
+    }
+
+    .quants {
+        margin: 10px;
+        padding: 65px 0;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Giga:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sriracha:regular" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>SIP Calculator</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>SIP Calculator</h1>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <form onsubmit="return validate()">
+                    <div class="field">
+                        <p>Monthly investment</p>
+                        <input type="text" id="amount" placeholder="Enter the Amount">
+                        <span id="invalid-amount" class="error"></span>
+                    </div>
+                    <div class="field">
+                        <p>Expected return rate (p.a)</p>
+                        <input type="text" id="interest" placeholder="Enter the Rate of Interest">
+                        <span id="invalid-rate" class="error"></span>
+                    </div>
+                    <div class="field">
+                        <p>Time period (Yr)</p>
+                        <input type="text"  id="tenure" placeholder="Enter the period">
+                        <span id="invalid-tenure" class="error"></span>
+                    </div>
+                    <div class="calculate">
+                        <input type="submit" id="calculate" value="Calculate">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="container-result">
+                <div class="field-result">
+                    <p>Invested Amount</p>
+                    <input type="text" id="principal">
+                </div>
+                <div class="field-result">
+                    <p>Est. returns</p>
+                    <input type="text" id="t-interest">
+                </div>
+                <div class="field-result">
+                    <p>Total value</p>
+                    <input type="text" id="t-amount">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

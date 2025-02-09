@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Giga:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sriracha:regular" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Emi Calculator</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>EMI Calculator</h1>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+            <form>
+                <div class="field">
+                    <p>Loan Amount</p>
+                    <input type="text" id="amount" placeholder="Enter the Amount">
+                    <span id="invalid-amount" class="error"></span>
+                </div>
+                <div class="field">
+                    <p>Rate of Interest</p>
+                    <input type="text" id="interest" placeholder="Enter the Rate of Interest">
+                    <span id="invalid-rate" class="error"></span>
+                </div>
+                <div class="field">
+                    <p>Loan tenure</p>
+                    <input type="text"  id="tenure" placeholder="Enter the Loan period">
+                    <span id="invalid-tenure" class="error"></span>
+                </div>
+                <div class="calculate">
+                    <input type="submit" onclick="validate()" value="Calculate">
+                </div>
+            </form>
+            </div>
+        </section>
+        <section>
+            <div class="container-result">
+                <div class="field-result">
+                    <p>Monthly EMI</p>
+                    <input type="text" id="emi">
+                </div>
+                <div class="field-result">
+                    <p>Principal Amount</p>
+                    <input type="text" id="principal">
+                </div>
+                <div class="field-result">
+                    <p>Total interest</p>
+                    <input type="text" id="t-interest">
+                </div>
+                <div class="field-result">
+                    <p>Total Amount</p>
+                    <input type="text" id="t-amount">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

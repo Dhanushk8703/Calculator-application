@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.calc {
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    font-family: Tektur;
+}
+
+.calc h1 {
+    padding: 30px 0;
+    text-align: center;
+}
+
+#clear {
+    border-radius: 40px;
+    font-size: x-large;
+}
+
+#clear:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+}
+
+#answer {
+    border-radius: 40px;
+    font-size: x-large;
+}
+
+#answer:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+}
+
+.dial {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px 20px;
+    gap: 14px;
+}
+
+.dials {
+    padding: 20px 20px;
+    font-size: x-large;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    background-color: rgb(47, 47, 86);
+}
+
+.dials:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+
+}
+
+.calc-name {
+    padding: 0 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.display {
+    width: 50%;
+    height: 50px;
+    font-size: x-large;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(72, 68, 68);
+    color: white;
+}
+
+i {
+    float: right;
+    font-size: x-large;
+    padding: 0 40px;
+    border: none;
+    border-radius: 100%;
+}
+
+/* Initial page load animation (fade-in + slide-in effect) */
+body {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* When the page is fully loaded */
+body.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide out effect before redirecting */
+.fade-out {
+    opacity: 0;
+    transform: translateX(100px); /* Move right before leaving */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+@media (max-width : 768px) {
+    .calc {
+        padding: 100px 0;
+    }
+}
